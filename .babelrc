@@ -1,0 +1,13 @@
+{
+    "env": {
+        "development": {
+            "presets": ["env"]
+        },
+        "commonjs": {
+            "presets": ["env"]
+        },
+        "es6": {
+            "presets": [["env", { "modules": false }]]
+        }
+    }
+}
