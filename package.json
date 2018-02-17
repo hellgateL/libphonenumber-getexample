@@ -1,0 +1,49 @@
+{
+  "name": "libphonenumber-getexample",
+  "version": "1.1.0",
+  "description": "A smaller realization of Google libphonenumber getExampleNumber function",
+  "main": "dist/index.js",
+  "sideEffects": false,
+  "dependencies": {
+    "minimist": "^1.2.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.18.0",
+    "babel-core": "^6.21.0",
+    "babel-loader": "^7.1.4",
+    "babel-preset-env": "^1.6.1",
+    "chai": "^3.5.0",
+    "cross-env": "^5.2.0",
+    "json-loader": "^0.5.4",
+    "mocha": "^5.0.5",
+    "webpack": "^4.1.1",
+    "webpack-cli": "^2.0.12"
+  },
+  "scripts": {
+    "test": "mocha --require babel-core/register --colors --bail --reporter spec --require ./test/setup.js \"tests/**/*.test.js\"",
+    "browser-build": "cross-env WEBPACK_ENV=build webpack --mode production --progress --colors",
+    "browser-build-dev": "WEBPACK_ENV=dev webpack --mode development --progress --colors --watch",
+    "build-commonjs-modules": "cross-env BABEL_ENV=commonjs babel ./source --out-dir ./build --source-maps --ignore test.js",
+    "build-es6-modules": "cross-env BABEL_ENV=es6 babel ./source --out-dir ./es6 --source-maps --ignore test.j",
+    "build": "npm-run-all build-commonjs-modules build-es6-modules browser-build",
+    "prepublish": "npm test&& npm run build"
+  },
+  "author": "“hellgateL“ <“hello_kitties@outlook.com”>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hellgateL/libphonenumber-getexample.git"
+  },
+  "bugs": {
+    "url": "https://github.com/hellgateL/libphonenumber-getexample/issues"
+  },
+  "homepage": "https://github.com/hellgateL/libphonenumber-getexample#readme",
+  "keywords": [
+    "javascript",
+    "telephone",
+    "phone",
+    "number",
+    "input",
+    "mobile"
+  ],
+  "license": "MIT"
+}
