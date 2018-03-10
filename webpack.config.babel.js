@@ -5,7 +5,7 @@ const global_variable_name = 'libphonenumber';
 
 export default {
     entry: path.join(__dirname, 'src/index.js'),
-    devtool: 'source-map',
+    devtool: 'eval-source-map',
     output: {
         path: path.join(__dirname, '/dist'),
         filename: `${library_name}.min.js`,
