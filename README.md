@@ -4,8 +4,7 @@
 
 A smaller realization of Google `libphonenumber` getExampleNumber function:
 
-* Tiny footprint: ~30 kilobytes (10 kB code + 20 kB metadata) and
-  `5kb gzipped`
+* Tiny footprint: ~15 kilobytes minified and `~5kb gzipped`
 
 ## Install
 
