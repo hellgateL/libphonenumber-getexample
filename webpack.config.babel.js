@@ -10,7 +10,7 @@ export default {
         filename: `${library_name}.min.js`,
         library: global_variable_name,
         libraryTarget: 'umd',
-        umdNamedDefine: true
+        globalObject: "(typeof window !== 'undefined' ? window : this)"
     },
     module: {
         rules: [

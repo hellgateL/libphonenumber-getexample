@@ -1,6 +1,6 @@
 {
   "name": "libphonenumber-getexample",
-  "version": "1.1.0",
+  "version": "1.1.3",
   "description": "A smaller realization of libphonenumber-js getExampleNumber function",
   "main": "dist/libphonenumber-getexample.min.js",
   "sideEffects": false,
@@ -21,21 +21,18 @@
   },
   "scripts": {
     "test": "mocha --require babel-core/register --colors --bail --reporter spec --require ./test/setup.js \"tests/**/*.test.js\"",
-    "browser-build": "webpack --mode production --progress",
+    "build-umd": "webpack --mode production --progress",
     "browser-build-dev": "webpack --mode development --progress --colors --watch",
     "build-commonjs-modules": "cross-env BABEL_ENV=commonjs babel ./src --out-dir ./dist --source-maps",
     "build-es6-modules": "cross-env BABEL_ENV=es6 babel ./src --out-dir ./es6 --source-maps --ignore test.j",
-    "build": "browser-build"
+    "build": "npm run build-umd"
   },
   "author": "“hellgateL“ <“hello_kitties@outlook.com”>",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/hellgateL/libphonenumber-getexample.git"
+    "url": "git+https://github.com/catamphetamine/libphonenumber-js.git"
   },
-  "bugs": {
-    "url": "https://github.com/hellgateL/libphonenumber-getexample/issues"
-  },
-  "homepage": "https://github.com/hellgateL/libphonenumber-getexample#readme",
+  "homepage": "https://github.com/catamphetamine/libphonenumber-js#readme",
   "keywords": [
     "javascript",
     "telephone",
